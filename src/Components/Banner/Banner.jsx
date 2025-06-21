@@ -53,7 +53,7 @@ const Banner = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <img
-            src="https://paybybd.com/assets/img/hero-img.webp"
+            src="https://i.ibb.co/bMsvX90W/download-20.png"
             alt="Payment"
             className="w-full max-w-sm mx-auto"
           />

@@ -37,9 +37,9 @@ const countries = [
     activeInternetPercent: 60,
     betOnlinePercent: 10,
     payments: [
-      'https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg',
-      'https://upload.wikimedia.org/wikipedia/commons/9/94/Bkash_Logo.png',
-      'https://upload.wikimedia.org/wikipedia/commons/5/5e/Nagad_Logo.png',
+      'https://wp.logos-download.com/wp-content/uploads/2022/01/BKash_Logo_icon-700x662.png',
+      'https://pngtom.com/files/preview/960x960/317020431739wsqe06kdzz8abbcj9ubb1txjumovorxogdiwsxfdahjy5lxcole5zugbetwsrclps4hvvlt84nfffvkb7aeykoiptprmrlpzsux.png',
+      'https://www.logo.wine/a/logo/Nagad/Nagad-Vertical-Logo.wine.svg',
     ],
   },
   {
@@ -86,11 +86,10 @@ const Geographies = () => {
             <button
               key={idx}
               onClick={() => setActiveIndex(idx)}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
-                activeIndex === idx
-                  ? 'bg-green-600 text-white shadow-md'
-                  : 'bg-gray-100 text-indigo-900 hover:bg-green-50'
-              }`}
+              className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${activeIndex === idx
+                ? 'bg-green-600 text-white shadow-md'
+                : 'bg-gray-100 text-indigo-900 hover:bg-green-50'
+                }`}
             >
               {c.name}
             </button>
@@ -117,12 +116,10 @@ const Geographies = () => {
                 style={{
                   background: `conic-gradient(
                     #16a34a 0% ${country.activeInternetPercent}%,
-                    #86efac ${country.activeInternetPercent}% ${
-                    country.activeInternetPercent + country.betOnlinePercent
-                  }%,
-                    #ffffff ${
-                    country.activeInternetPercent + country.betOnlinePercent
-                  }% 100%)`,
+                    #86efac ${country.activeInternetPercent}% ${country.activeInternetPercent + country.betOnlinePercent
+                    }%,
+                    #ffffff ${country.activeInternetPercent + country.betOnlinePercent
+                    }% 100%)`,
                 }}
               ></div>
             </div>

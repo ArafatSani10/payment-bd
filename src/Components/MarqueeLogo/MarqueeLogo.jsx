@@ -1,61 +1,42 @@
 import React from "react";
 
 const logos = [
-  "https://paybybd.com/assets/img/payment/logo-white.webp",
-  "https://paybybd.com/assets/img/payment/Mastercard-logo.webp",
-  "https://paybybd.com/assets/img/payment/Mir-logo.SVG.webp",
-  "https://paybybd.com/assets/img/payment/Orange_logo-2.webp",
-  "https://paybybd.com/assets/img/payment/RuPay.webp",
-  "https://paybybd.com/assets/img/payment/Visa_2021.webp",
-  "https://paybybd.com/assets/img/payment/Vodafone.webp",
-  "https://paybybd.com/assets/img/payment/We_logo.webp",
-  "https://paybybd.com/assets/img/payment/phonepe.webp",
-  "https://paybybd.com/assets/img/payment/cbep.webp",
-  "https://paybybd.com/assets/img/payment/c6n.webp",
-  "https://paybybd.com/assets/img/payment/tinkoff.webp",
-  "https://paybybd.com/assets/img/payment/etisalat-logo.webp",
-  "https://paybybd.com/assets/img/payment/Google_Pay_Logo.webp",
-  "https://paybybd.com/assets/img/payment/Group.webp",
+  "https://wp.logos-download.com/wp-content/uploads/2022/01/BKash_Logo_icon-700x662.png",
+  "https://pngtom.com/files/preview/960x960/317020431739wsqe06kdzz8abbcj9ubb1txjumovorxogdiwsxfdahjy5lxcole5zugbetwsrclps4hvvlt84nfffvkb7aeykoiptprmrlpzsux.png",
+  "https://www.logo.wine/a/logo/Nagad/Nagad-Vertical-Logo.wine.svg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvIJELJ5mEGZCQE0tzsovNo8m2LfumnAhJg&s",
+  // আপনি চাইলে অন্য লোগোগুলো এখানে যোগ করতে পারেন
 ];
 
-const MarqueeLogo = () => {
-  return (
-    <div className="relative overflow-hidden max-w-7xl  mx-auto py-8 rounded-2xl ">
-      <div className="group overflow-hidden">
-        <div
-          className="flex w-max  animate-marquee group-hover:[animation-play-state:paused] gap-8 px-4"
-          style={{ animationDuration: "40s" }}
-        >
-          {logos.concat(logos).map((logo, idx) => (
-            <img
-              key={idx}
-              src={logo}
-              alt="logo"
-              loading="lazy"
-              className="h-16 w-16 object-contain rounded-xl bg-white p-2 shadow hover:scale-105 transition duration-300"
-            />
-          ))}
-        </div>
+const MarqueeLogo = () => (
+  <div className="relative overflow-hidden max-w-7xl mx-auto py-8 bg-white">
+    <div className="group overflow-hidden">
+      <div
+        className="flex w-max animate-marquee group-hover:[animation-play-state:paused] gap-8 px-4"
+        style={{ animationDuration: "25s" }}
+      >
+        {logos.concat(logos).map((src, idx) => (
+          <img
+            key={idx}
+            src={src}
+            alt={`logo-${idx}`}
+            loading="lazy"
+            className="h-20 w-auto object-contain p-2 rounded-full  hover:scale-105 transition"
+          />
+        ))}
       </div>
-
-      {/* CSS Styles */}
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee linear infinite;
-          animation-timing-function: linear;
-          will-change: transform;
-        }
-      `}</style>
     </div>
-  );
-};
+    <style jsx>{`
+      @keyframes marquee {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee linear infinite;
+        will-change: transform;
+      }
+    `}</style>
+  </div>
+);
 
 export default MarqueeLogo;
